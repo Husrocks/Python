@@ -18,6 +18,32 @@ if Transaction_amount >= 10000:
 else:
     print("transaction Approved")
 
+epoches=int(input("cycle "))
+if epoches <= 200:
+    print("its under trainin")
+elif epoches >200:
+    print("traind")
+else:
+    print ("no found")    
+    
+fruit=str(input("add colour"))
+if fruit =='pink':
+  print("husnain")
+else:
+  print("salar")  
+
+samples = int(input("Enter number of samples: "))
+print (samples +1)
+
+sample_count = input("Enter a number: ")
+
+try: 
+    sample_count = int (sample_count)
+    print(f"you entered {sample_count} samples.")
+except ValueError:
+    print("enter a number a whole number such as 20")
+
+
 
 #Loops
 
@@ -88,4 +114,22 @@ for h in house:
     print (f"there are {len(scores)} students in the class")
     print (f"High Risk: {high_risk_count}, Moderate Risk: {moderate_risk_count}, Low Risk: {low_risk_count}")
             
+
+number = [1,2,3,4,5,6,7,8,9,10]
+
+for i in  range(len(number)):
+   numbers = number[i]*number[i]
+   print ("square",numbers)
+
+
+secret = 7
+guess = None
+
+while guess != secret:
+    guess = input("Guess the number: ")
+    try:
+        guess = int(guess)
+        print("Correct!")
+    except ValueError:
+        print("whole number")
 
