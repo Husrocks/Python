@@ -1,4 +1,12 @@
-#Conditionals 
+#Module 1: Variables and Basic Data Types
+#its in variable file
+
+
+#Module 2: Control Flow
+#Control flow allows your program to make decisions and repeat actions.In ML and AI, this is used constantly—for example, to stop training a model once it reaches a certain accuracy or to loop through thousands of images in a dataset.
+
+
+
 #Student Performance Prediction
 Math_score = 45
 
@@ -17,6 +25,17 @@ if Transaction_amount >= 10000:
     print ("Flag for Fraud Investigation")
 else:
     print("transaction Approved")
+
+male = int(input("Enter number of males"))
+Female = int(input("Enter number of Females"))
+if male >=100:
+    print("Males are more than females")
+    if male >=100 and Female <100:
+        print("nested if succeed")
+    else:
+        print("nested if is not succed ")
+else:
+    print("else statemaent ")
 
 epoches=int(input("cycle "))
 if epoches <= 200:
@@ -56,6 +75,12 @@ for score in scores:
         print (f"Score:{score} , Passed")
     else:
         print (f"Score:{score},Failed")
+# Using a while loop to simulate a training countdown
+countdown = 3
+while countdown > 0:
+    print(f"Training starts in {countdown}...")
+    countdown -= 1  # Decrement by 1
+print("Training started!")
 
 #Calculating Prediction Errors
 actual_scores = [43 , 89 , 87 , 43]
@@ -96,6 +121,12 @@ for h in house:
         status = "Affordable"
     print (f"The house in {h['location']} is {status} with a price of {price}.")
 
+attempt = 0
+
+while attempt < 3:
+    print("Training attempt", attempt + 1)
+    attempt +=1
+
 #risk classification based on scores
     scores = [90, 25, 45, 32, 78, 55, 20, 88]
     high_risk_count = 0
@@ -115,21 +146,25 @@ for h in house:
     print (f"High Risk: {high_risk_count}, Moderate Risk: {moderate_risk_count}, Low Risk: {low_risk_count}")
             
 
-number = [1,2,3,4,5,6,7,8,9,10]
 
-for i in  range(len(number)):
-   numbers = number[i]*number[i]
-   print ("square",numbers)
+#the accuracy gate 
+model_accuracy = float(input("Enter accuracy: "))
+if model_accuracy >= 0.95:
+    print("Deploy to production")
+elif model_accuracy >= 0.80 and model_accuracy<= 0.94:
+    print("Requires more training")
+elif model_accuracy < 0.80:
+    print("Failed")
+#the data processor
+for number in range(1,11):
+    square = number**2
+    print(square)
+#optimizer
+loss = 0.5
+while loss > 0.1 :
+    loss -= 0.1 
+    # Round to avoid floating-point precision artifacts (e.g., 0.30000000000000004)
+    loss = round(loss, 1)
+    print(f"the loss is",loss)
 
-
-secret = 7
-guess = None
-
-while guess != secret:
-    guess = input("Guess the number: ")
-    try:
-        guess = int(guess)
-        print("Correct!")
-    except ValueError:
-        print("whole number")
 
